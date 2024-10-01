@@ -37,7 +37,7 @@ const PasteCard = ({ paste }) => {
   return (
     <div className=" px-4 py-2 w-full flex items-start gap-5 justify-between border rounded ">
       <div className=" flex flex-col gap-4">
-        <h2 className="text-3xl font-bold">{paste?.title.toUpperCase()}</h2>
+        <h2 className="text-3xl font-bold text-ellipsis">{paste?.title.toUpperCase()}</h2>
         <p className="text-sm text-justify text-ellipsis">{paste?.content}</p>
       </div>
       <div className="flex flex-col gap-4 w-1/4 py-1">
@@ -79,7 +79,7 @@ const PasteCard = ({ paste }) => {
             <MdOutlineContentCopy />
           </button>
         </div>
-        <div className="flex justify-end items-center gap-2">
+        <div className="flex justify-end gap-2">
           <SlCalender className="text-[#747bff]" />
           <p className="font-semibold text-sm text-zinc-400">
             {paste.createdAt}
